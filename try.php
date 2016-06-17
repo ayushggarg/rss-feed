@@ -1,4 +1,4 @@
-<?php
+    <?php
 
     $handle = fopen("urllist.txt", "r");
         if ($handle) 
@@ -6,8 +6,12 @@
             while (($line = fgets($handle)) !== false) 
             {
                 $url = $line;
-                echo '<a href=" ' .$url. ' "></a>';
-                echo $url."<br>";
+                
+                ?>
+
+                <a href = <? echo $url; ?> > </a> 
+                <?
+                //echo $url."<br>";
             }
 
             fclose($handle);
