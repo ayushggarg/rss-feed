@@ -1,7 +1,24 @@
- <?
+<?php
 
+    $handle = fopen("urllist.txt", "r");
+        if ($handle) 
+        {
+            while (($line = fgets($handle)) !== false) 
+            {
+                $url = $line;
+                echo '<a href=" ' .$url. ' "></a>';
+                echo $url."<br>";
+            }
 
- ?>
+            fclose($handle);
+        } 
+        else 
+        {
+            echo "error opening the file";
+        } 
+    
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -18,10 +35,7 @@
         <a href="#" id="linkurl"></a>
     </div>
     <div id="preview-container2"></div>
-    <script>
-        linkurl = "http://home.cern/scientists/updates/2016/06/track-latest-news-and-results-aida-2020"
-        document.getElementById("linkurl").href = linkurl;
-    </script>
+    
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/proxy-ajax.js"></script>
     <script type="text/javascript" src="js/bootstrap-linkpreview.js"></script>
