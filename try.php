@@ -1,5 +1,4 @@
-    <?php
-
+<?php
     $handle = fopen("urllist.txt", "r");
         if ($handle) 
         {
@@ -13,7 +12,6 @@
                 <?
                 //echo $url."<br>";
             }
-
             fclose($handle);
         } 
         else 
@@ -46,4 +44,3 @@
     <script type="text/javascript" src="js/main.js"></script> 
 </body>
 </html>
- 
